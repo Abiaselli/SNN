@@ -1,5 +1,5 @@
 **SNN Transformer** <br />
-by Eugene Izhikevich, SpikeCore.com <br />
+Eugene Izhikevich (2025) Spiking Manifesto, https://arxiv.org/pdf/2512.11843 <br />
 Hardware patent pending 
 
 **Data for training**
@@ -12,7 +12,7 @@ Use any sufficiently large text file. Provide filename in line 546
 gcc -O3 -o main main.c <br />
 ./main
 
-Loss values during training are saved in the FILE_NAME in line 16
+Validation loss values during training are saved in the FILE_NAME in line 16
 
 **Deviations from the model in the paper**
 
