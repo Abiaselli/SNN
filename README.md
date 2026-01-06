@@ -9,7 +9,7 @@ Use any sufficiently large text file. Provide filename in line 546
 
 **Compile and Run**
 
-gcc -O3 -o main main.c <br />
+gcc -O3 -o main main.c -lm <br />
 ./main
 
 Validation loss values during training are saved in the FILE_NAME in line 16
