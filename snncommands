@@ -1,0 +1,41 @@
+INSTALL
+
+unzip snn_lut_cpp.zip
+cd snn_lut_cpp
+mkdir -p build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+cmake --build . -j
+
+TRAIN
+from your snn_lut_cpp/build folder
+
+./snn_lut train \
+  --ckpt-dir runs/run1 \
+  --data /home/a/GPTeacher-Code-Instruct/codegen-instruct.json \
+  --steps 50000 --save-every 5000 --eval-every 2000 --keep-last 5
+
+RESUME
+
+./snn_lut train --ckpt-dir runs/run1 --resume runs/run1/latest.bin --steps 50000
+
+TEST SAMPLE
+
+./snn_lut sample --ckpt runs/run1/best.bin --prompt "hello " --len 200 --temp 0.4 --out out.bin
+
+
+view bin output as bytes
+xxd out.bin | less
+or
+hexdump -C out.bin | less
+
+byte conversion to text
+
+
+cp out.bin out.txt
+gedit out.txt
+
+or
+
+iconv -f utf-8 -t utf-8 out.bin > out.txt
+
+
