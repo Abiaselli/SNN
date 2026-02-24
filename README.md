@@ -1,3 +1,10 @@
+This is a C++ implementation of the SNN manifesto design by Eugene Izhikevich. 
+His original files are included, main.c, readme and license. 
+To use this, extract the zip file, build through Linux terminal, and run with the commands in snncommands.txt.
+This adds the ability to carry over the same model to different tests, pass a sample inference, and choose varying types of files as the input.
+
+
+**ORIGINAL**<br/>
 **SNN Transformer** <br />
 Eugene Izhikevich (2025) Spiking Manifesto, https://arxiv.org/pdf/2512.11843 <br />
 Hardware patent pending 
