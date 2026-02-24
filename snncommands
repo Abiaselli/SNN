@@ -11,7 +11,7 @@ from your snn_lut_cpp/build folder
 
 ./snn_lut train \
   --ckpt-dir runs/run1 \
-  --data /home/a/GPTeacher-Code-Instruct/codegen-instruct.json \
+  --data train_v2_drcat_02.csv \
   --steps 50000 --save-every 5000 --eval-every 2000 --keep-last 5
 
 RESUME
